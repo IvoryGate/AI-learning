@@ -1,1 +1,1 @@
-from activations import ReLu
+from .activations import ReLu

@@ -25,3 +25,23 @@ pip install -r requirements.txt
 def ReLu(input: float) -> float:
     return np.maximum(0, input)
 ```
+
+### 随机生成输入，权重，偏置值
+
+```python
+def create_inputs(
+        inputs_n: int,
+    ) -> npt:
+        return np.random.randn(inputs_n)
+
+def create_weights(
+        inputs_n: int,
+        neurons_n: int
+    ) -> npt:
+        return np.random.randn(inputs_n, neurons_n)
+
+def create_biases(
+        neurons_n: int
+    ) -> npt:
+        return np.random.randn(neurons_n)
+```
