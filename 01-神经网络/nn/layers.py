@@ -13,10 +13,10 @@ class Layer:
 class InputLayer():
     def __init__(self, input_n: int) -> None:
         self.input_n = input_n
-        self.create_inputs()
     
-    def create_inputs(self) -> None:
+    def forward(self) -> None:
         self.inputs = create_inputs(self.input_n)
+        return self.inputs
 
 class MiddleLayer(Layer):
     def __init__(self, input_n: int, output_n: int) -> None:
